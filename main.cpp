@@ -109,7 +109,7 @@ class Doubly_linked_list_operations
 {
     public:
         void add_node(Node * head,Parser fragmented_data);
-        void delete_node();
+        void delete_node(Node *head,Parser fragmented_data);
 };
 void Doubly_linked_list_operations::add_node(Node * head,Parser fragmented_data)
 {
@@ -167,6 +167,28 @@ void Doubly_linked_list_operations::add_node(Node * head,Parser fragmented_data)
         return;
     }
 }
+void Doubly_linked_list_operations::delete_node(Node * head,Parser fragmented_data)
+{
+    int index = fragmented_data.index;
+
+    //to access the last node
+    Node * temp = head;
+    int node_counter = 1;
+    
+    while(temp -> next != NULL)
+    {
+        temp = temp -> next;
+        node_counter++;
+    }
+
+    if(node_counter < index)
+    {
+        Node * temp_prev = temp -> prev;
+        delete(temp);
+        temp_prev -> next = NULL;
+    }
+    
+}
 
 void print_screen(Node * head)
 {
@@ -223,7 +245,8 @@ int main()
         parser_obj.main_parser_func(command);
 
         //add conditional
-        dbl_obj.add_node(temp,parser_obj);
+        if(parser_obj.operant == "E") dbl_obj.add_node(temp,parser_obj);
+        else dbl_obj.delete_node(temp,parser_obj);
     }
 
     print_screen(root);
