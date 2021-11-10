@@ -1,6 +1,0 @@
-E(0#mert)
-E(1#Aysenur)
-E(2#Mustafa)
-E(0#Mehmet)
-S(12)
-E(66#Ahmet)

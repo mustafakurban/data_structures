@@ -1,0 +1,5 @@
+E(0#ali sari)
+E(1#veli yari)
+E(3#ayse koru)
+E(4#su)
+S(1)
