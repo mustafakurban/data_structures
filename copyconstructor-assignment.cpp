@@ -2,6 +2,13 @@
 //date		: 26/11/21 
 //author	: mustafa kurban
 
+
+//	covered topics in this code
+//	 * constructor<->copy constructor
+//	 * copy assignment
+
+
+
 #include <iostream>
 
 namespace uiuc{
